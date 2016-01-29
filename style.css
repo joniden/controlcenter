@@ -4,8 +4,8 @@ html,body{
 }
 
 .swiper-container{
-	max-width: 375px;
-	width: 100%;
+	width: 375px;
+	max-width: 100%;
 	margin: auto;
 	height: 675px;
 	background: url(images/homescreen.png) no-repeat;
