@@ -1,0 +1,62 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+.swiper-container{
+	max-width: 375px;
+	width: 100%;
+	margin: auto;
+	height: 675px;
+	background: url(images/homescreen.png) no-repeat;
+	background-size: cover;
+}
+
+.swiper-wrapper{
+	bottom: 675px;
+	transition: all 0.2s;
+	position: relative;
+}
+
+.swiper-slide{
+	height: 100%;
+	position: relative;
+}
+
+.swiper-slide > div{
+	height: 475px;
+	bottom: 0;
+	position: absolute;
+	background: black;
+	opacity: 1;
+}
+
+.swiper-slide img{
+	max-width: 100%;
+	margin-top: -192px;
+}
+
+.active_area{
+	height: 100px;
+	width: 100%;
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	z-index: 1000;
+}
+
+.area{
+	width: 33%;
+	margin: 0;
+	height: 100px;
+	display: block;
+	float: left;
+}
+
+.slidedown{
+	height: 200px;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
+}

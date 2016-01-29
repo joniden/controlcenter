@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="bower_components/Swiper/dist/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="active_area">
+			<div class="area"></div>
+			<div class="area"></div>
+			<div class="area"></div>
+		</div>
+
+		<div class="slidedown"></div>
+
+		<!-- Slider main container -->
+		<div class="swiper-container">
+		    <!-- Additional required wrapper -->
+		    <div class="swiper-wrapper">
+		        <!-- Slides -->
+		        <div class="swiper-slide">
+		        	<div><img src="images/left_page/controlcenter_search_keyboard_noresult.png"></div>
+		        </div>
+		        <div class="swiper-slide">
+		        	<div><img src="images/control_center/control-center-second-normal.png"></div>
+		        </div>
+		        <div class="swiper-slide">
+		        	<div><img src="images/recent_apps/med clear all/mostrecent1.png"></div>
+		        </div>
+		    </div>
+		</div>
+		
+
+
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+			    //initialize swiper when document ready  
+			    var mySwiper = new Swiper ('.swiper-container', {
+			      // Optional parameters
+			      direction: 'horizontal',
+			      loop: false,
+			      initialSlide: 1
+			    });
+
+			    function slideup(){
+			    	$('.swiper-wrapper').css('bottom','0');
+			    }
+
+			    function slidedown(){
+			    	$('.swiper-wrapper').css('bottom','-675px');
+			    }
+
+			    $('.area:nth-child(1)').click(function(){
+			    	mySwiper.slideTo(0);	    		
+			    	
+			    });  
+
+			    $('.area:nth-child(2)').click(function(){
+			    	mySwiper.slideTo(1);	    	
+			    });     
+
+			    $('.area:nth-child(3)').click(function(){
+			    	mySwiper.slideTo(2);
+			    	
+			    });  
+
+			    mySwiper.on('slideChangeEnd',function(){
+		    		slideup();  
+		    	}); 	 
+
+			    $('.slidedown').click(function(){
+			    	slidedown();
+			    });       
+		  	});
+		</script>
+	</body>
+</html>
