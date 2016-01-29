@@ -54,23 +54,15 @@
 			    	$('.swiper-wrapper').css('bottom','-675px');
 			    }
 
-			    $('.area:nth-child(1)').click(function(){
-			    	mySwiper.slideTo(0,0);	    		
+			    $('.area').click(function(){
+
+
+			    	mySwiper.slideTo($(this).index(),0);
+			    	slideup();  
 			    	
 			    });  
 
-			    $('.area:nth-child(2)').click(function(){
-			    	mySwiper.slideTo(1,0);	    	
-			    });     
-
-			    $('.area:nth-child(3)').click(function(){
-			    	mySwiper.slideTo(2,0);
-			    	
-			    });  
-
-			    mySwiper.on('slideChangeEnd',function(){
-		    		slideup();  
-		    	}); 	 
+			    	 
 
 			    $('.slidedown').click(function(){
 			    	slidedown();
