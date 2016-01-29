@@ -9,7 +9,7 @@ html,body{
 	margin: auto;
 	height: 675px;
 	background: url(images/homescreen.png) no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 
 .swiper-wrapper{
