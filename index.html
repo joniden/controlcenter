@@ -62,20 +62,10 @@
 			      initialSlide: 1
 			    });
 
-			    function slideup(){
-			    	$('.swiper-wrapper').css('bottom','0');
-			    }
-
-			    function slidedown(){
-			    	$('.swiper-wrapper').css('bottom','-675px');
-			    }
-
-			    $('.area').click(function(){
-
+			    $('.area').on('click touchstart',function(){
 
 			    	swiperh.slideTo($(this).index(),0);
 			    	swiperv.slideTo(1);
-			    	//slideup();  
 
 			    });  
 
