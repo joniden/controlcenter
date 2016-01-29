@@ -4,19 +4,23 @@ html,body{
 	height: 100%;
 }
 
+body{
+	background: url(images/homescreen.png) no-repeat;
+	background-size: contain;
+}
+
 .swiper-container{
 	width: 375px;
 	max-width: 100%;
 	margin: auto;
 	height: 100%;
 	max-height: 100%;
-	background: url(images/homescreen.png) no-repeat;
-	background-size: contain;
+	
 	position: relative;
 }
 
 .swiper-wrapper{
-	bottom: -675px;
+	
 	transition: all 0.2s;
 	position: relative;
 }
@@ -26,8 +30,8 @@ html,body{
 	position: relative;
 }
 
-.swiper-slide > div{
-	height: 67%;
+.img-wrap{
+	height: 72%;
 	bottom: 0;
 	position: absolute;
 	background: black;
@@ -48,6 +52,10 @@ html,body{
 	z-index: 1000;
 }
 
+img.hide{
+	visibility: hidden;
+}
+
 .area{
 	width: 33%;
 	margin: 0;
@@ -57,7 +65,7 @@ html,body{
 }
 
 .slidedown{
-	height: 200px;
+	height: 28%;
 	top: 0;
 	position: absolute;
 	width: 100%;
