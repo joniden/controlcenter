@@ -28,7 +28,7 @@
 					        <!-- Slides -->
 					        <div class="swiper-slide">
 					        	<div class="img-wrap">
-					        		<img src="images/v2/controlcenter-search1.png">
+					        		<img src="images/v2/controlcenter-search2.png">
 					        	</div>
 					        </div>
 					        <div class="swiper-slide">
@@ -39,7 +39,7 @@
 					        </div>
 					        <div class="swiper-slide">
 
-					        	<div class="img-wrap">
+					        	<div id="recent" class="img-wrap">
 					        		<span class="clear"></span>
 					        		<img src="images/v2/recent-apps-1.png" />
 					        	</div>
@@ -55,20 +55,32 @@
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>
 		<script type="text/javascript">
+
+			/* Random value */
+			Array.prototype.sample = function(){
+			  return this[Math.floor(Math.random()*this.length)];
+			}
+
+			function random_recent(){
+				var recent = $('#recent img');
+				var random = [1,2,3].sample();
+				recent.attr('src','images/v2/recent-apps-'+random+'.png');
+
+			}
+
 			$(document).ready(function () {
-			    //initialize swiper when document ready  
+			  
 			    var swiperv = new Swiper ('.vertic', {
-			      // Optional parameters
+			 
 			      direction: 'vertical',
 			      loop: false
 			    });
 
 			    var swiperh = new Swiper ('.horizon', {
-			      // Optional parameters
-			      direction: 'horizontal',
-			      loop: false,
-			      initialSlide: 1,
-			      pagination: '.swiper-pagination',
+			      	direction: 'horizontal',
+			      	loop: false,
+			      	initialSlide: 1,
+			      	pagination: '.swiper-pagination',
     				paginationClickable: true
 			    });
 
@@ -88,6 +100,7 @@
 			    /* Fix fading */
 			    swiperv.on('ReachBeginning',function(){
 			    	$('.vertic').removeClass('open');
+			    	random_recent();
 
 			    });
 

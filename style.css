@@ -32,9 +32,10 @@ body{
 
 
 .img-wrap{
-	height: 71%;
+	height: 72%;
 	bottom: 0;
 	position: absolute;
+	background: #5d6268;
 }
 
 .swiper-slide img{
