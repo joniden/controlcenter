@@ -32,7 +32,7 @@ body{
 
 
 .img-wrap{
-	height: 72%;
+	height: 71%;
 	bottom: 0;
 	position: absolute;
 }
@@ -89,4 +89,17 @@ img.hide{
     width: 60px;
     height: 30px;
     right: 15px;
+}
+
+.swiper-pagination{
+	background: #5d6268;
+	
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets{
+	bottom: 0;
+}
+
+.swiper-pagination-bullet-active{
+	background: #f2f4f6;
 }

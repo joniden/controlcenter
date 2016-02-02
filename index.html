@@ -27,7 +27,9 @@
 
 					        <!-- Slides -->
 					        <div class="swiper-slide">
-					        	<div class="img-wrap"><img src="images/v2/controlcenter-search1.png"></div>
+					        	<div class="img-wrap">
+					        		<img src="images/v2/controlcenter-search1.png">
+					        	</div>
 					        </div>
 					        <div class="swiper-slide">
 					        	<div class="img-wrap">
@@ -39,7 +41,8 @@
 
 					        	<div class="img-wrap">
 					        		<span class="clear"></span>
-					        		<img src="images/v2/recent-apps-1.png" /></div>
+					        		<img src="images/v2/recent-apps-1.png" />
+					        	</div>
 					        </div>
 					    </div>
 					    <div class="swiper-pagination"></div>
@@ -51,7 +54,6 @@
 
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>
-		<script type="text/javascript" src="bower_components/Blur.js/dist/jquery.blur.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function () {
 			    //initialize swiper when document ready  
@@ -66,7 +68,8 @@
 			      direction: 'horizontal',
 			      loop: false,
 			      initialSlide: 1,
-			      pagination: 'swiper-pagination'
+			      pagination: '.swiper-pagination',
+    				paginationClickable: true
 			    });
 
 			    var recentapps;
