@@ -13,67 +13,95 @@
 			<div class="area"></div>
 		</div>
 
-		<div class="slidedown"></div>
-
 		<div class="swiper-container vertic">
 
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<img class="hide" src="images/homescreen.png" />
 				</div>
-				<div class="swiper-slide">
+				<div class="swiper-slide sub">
 					<!-- Slider main container -->
 					<div class="swiper-container horizon">
 					    <!-- Additional required wrapper -->
-					    <div class="swiper-wrapper">
+					    <div class="swiper-wrapper ">
+
 					        <!-- Slides -->
 					        <div class="swiper-slide">
-					        	<div class="img-wrap"><img src="images/left_page/controlcenter_search_keyboard_noresult.png"></div>
+					        	<div class="img-wrap"><img src="images/v2/controlcenter-search1.png"></div>
 					        </div>
 					        <div class="swiper-slide">
-					        	<div class="img-wrap"><img src="images/control_center/control-center-second-normal.png"></div>
+					        	<div class="img-wrap">
+
+					        		<img src="images/v2/controlcenter-center.png">
+					        	</div>
 					        </div>
 					        <div class="swiper-slide">
-					        	<div class="img-wrap"><img src="images/recent_apps/med clear all/mostrecent1.png"></div>
+
+					        	<div class="img-wrap">
+					        		<span class="clear"></span>
+					        		<img src="images/v2/recent-apps-1.png" /></div>
 					        </div>
 					    </div>
+					    <div class="swiper-pagination"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-
+		<div class="slidedown"></div>
 
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/Blur.js/dist/jquery.blur.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function () {
 			    //initialize swiper when document ready  
 			    var swiperv = new Swiper ('.vertic', {
 			      // Optional parameters
 			      direction: 'vertical',
-			      loop: false,
+			      loop: false
 			    });
 
 			    var swiperh = new Swiper ('.horizon', {
 			      // Optional parameters
 			      direction: 'horizontal',
 			      loop: false,
-			      initialSlide: 1
+			      initialSlide: 1,
+			      pagination: 'swiper-pagination'
 			    });
+
+			    var recentapps;
 
 			    $('.area').on('click touchstart',function(){
 
 			    	swiperh.slideTo($(this).index(),0);
 			    	swiperv.slideTo(1);
-
-			    });  
-
-			    	 
+			    	
+			    }); 
 
 			    $('.slidedown').click(function(){
 			    	swiperv.slideTo(0);
-			    });       
+			    });  
+
+			    /* Fix fading */
+			    swiperv.on('ReachBeginning',function(){
+			    	$('.vertic').removeClass('open');
+
+			    });
+
+			    swiperv.on('ReachEnd',function(){
+			    	$('.vertic').addClass('open');
+			    });
+
+			    
+
+			    $('.clear').click(function(){
+			    	var img = $(this).next('img');
+			    	recentapps = $(this).next('img').attr('src');
+			    	img.attr('src','images/v2/recent-apps-noapp.png');
+
+			    });
+
+			      
 		  	});
 		</script>
 	</body>
