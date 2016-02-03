@@ -99,6 +99,7 @@ img.hide{
 
 .swiper-container-horizontal>.swiper-pagination-bullets{
 	bottom: 0;
+	height: 4%;
 }
 
 .swiper-pagination-bullet-active{
