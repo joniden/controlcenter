@@ -28,7 +28,7 @@
 					        <!-- Slides -->
 					        <div class="swiper-slide">
 					        	<div class="img-wrap">
-					        		<div class="blink"></div>
+					        		<div class="blink">|</div>
 					        		<img src="images/v3/controlcenter-search3.png">
 					        	</div>
 					        </div>
@@ -57,15 +57,17 @@
 		<script type="text/javascript" src="bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>
 		<script type="text/javascript">
 
-			/* Random value */
-			Array.prototype.sample = function(){
-			  return this[Math.floor(Math.random()*this.length)];
-			}
-
 			function random_recent(){
 				var recent = $('#recent img');
-				var random = [1,2].sample();
-				recent.attr('src','images/v3/frequently-apps'+random+'.png');
+				var random = 1;
+
+				var img = recent.attr('src');
+		        if (img.indexOf('1.png')!=-1) {
+		            random = 2;
+		        }else {
+		           random = 1;
+		       }
+		       recent.attr('src', 'images/v3/frequently-apps'+random+'.png');
 
 			}
 
@@ -86,6 +88,7 @@
 			    });
 
 			    var recentapps;
+			    var toggle = 1;
 
 			    $('.area').on('click touchstart',function(){
 
@@ -103,11 +106,28 @@
 			    	$('.vertic').removeClass('open');
 			    	random_recent();
 
+
 			    });
 
 			    swiperv.on('ReachEnd',function(){
 			    	$('.vertic').addClass('open');
 			    });
+
+			    /*setTimeout(function(){
+			    	$('.blink').fadeIn(0,function(){
+			    		$('.blink').delay(500).fadeOut();
+			    	});
+			    	
+				},1000);*/
+				function blink(selector){
+				    $(selector).fadeOut(800, function(){
+				        $(this).fadeIn('fast', function(){
+				            blink(this);
+				        });
+				    });
+				}
+
+				blink('.blink');
 
 			    /*$('.clear').click(function(){
 			    	var img = $(this).next('img');

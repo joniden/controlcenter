@@ -107,12 +107,14 @@ img.hide{
 }
 
 .blink{
-   	background-image: url(images/blinkingstick.gif);
+   	/*background-image: url(images/blinkingstick.gif);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;*/
     height: 25px;
     width: 21px;
     position: absolute;
     bottom: 53%;
-    left: 9%;
+    left: 11%;
+    font-size: 20px;
+    color: white;
 }
