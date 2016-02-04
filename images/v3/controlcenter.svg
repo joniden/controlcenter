@@ -16,7 +16,7 @@
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="iPhone-6" sketch:type="MSArtboardGroup">
-            <rect id="background" stroke="#979797" fill="#5D6268" sketch:type="MSShapeGroup" x="0" y="192" width="375" height="475"></rect>
+            <rect id="background" fill="#5D6268" sketch:type="MSShapeGroup" x="0" y="200" width="375" height="467"></rect>
             <g id="Audio-controls" sketch:type="MSLayerGroup" transform="translate(0.000000, 329.000000)">
                 <rect id="Back-Copy" fill="#6E7378" sketch:type="MSShapeGroup" x="0" y="0" width="375" height="104"></rect>
                 <path d="M267.270651,77.314321 L252.720219,68.1477778 L252.720219,86.4827778 L267.271729,77.315 L267.270651,86.4827778 L281.822161,77.315 L267.270651,68.1477778 L267.270651,77.314321 Z" id="FF" fill="#F2F4F6" sketch:type="MSShapeGroup"></path>
@@ -61,7 +61,7 @@
                 </g>
                 <circle id="Oval-1" stroke="#979797" fill="#979B9E" sketch:type="MSShapeGroup" cx="162.5" cy="24.5" r="24.5"></circle>
                 <g id="battery" transform="translate(150.000000, 18.000000)" sketch:type="MSShapeGroup">
-                    <rect id="Rectangle-9" stroke="#F2F4F6" fill="#FFCD00" x="0" y="0" width="25" height="11" rx="3"></rect>
+                    <rect id="Rectangle-9" stroke="#F2F4F6" stroke-width="2" fill="#FFCD00" x="0" y="0" width="25" height="11" rx="3"></rect>
                     <rect id="Rectangle-9" fill="#F2F4F6" x="24" y="3" width="3" height="5" rx="3"></rect>
                 </g>
                 <circle id="Oval-1-Copy" stroke="#979797" fill="#979B9E" sketch:type="MSShapeGroup" cx="93.5" cy="24.5" r="24.5"></circle>
