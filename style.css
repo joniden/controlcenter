@@ -105,3 +105,14 @@ img.hide{
 .swiper-pagination-bullet-active{
 	background: #f2f4f6;
 }
+
+.blink{
+   	background-image: url(images/blinkingstick.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 25px;
+    width: 21px;
+    position: absolute;
+    bottom: 53%;
+    left: 9%;
+}

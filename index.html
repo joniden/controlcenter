@@ -28,20 +28,21 @@
 					        <!-- Slides -->
 					        <div class="swiper-slide">
 					        	<div class="img-wrap">
-					        		<img src="images/v2/controlcenter-search2.png">
+					        		<div class="blink"></div>
+					        		<img src="images/v3/controlcenter-search3.png">
 					        	</div>
 					        </div>
 					        <div class="swiper-slide">
 					        	<div class="img-wrap">
 
-					        		<img src="images/v2/controlcenter-center.png">
+					        		<img src="images/v3/controlcenter.png">
 					        	</div>
 					        </div>
 					        <div class="swiper-slide">
 
 					        	<div id="recent" class="img-wrap">
-					        		<span class="clear"></span>
-					        		<img src="images/v2/recent-apps-1.png" />
+					        		
+					        		<img src="images/v3/frequently-apps1.png" />
 					        	</div>
 					        </div>
 					    </div>
@@ -63,8 +64,8 @@
 
 			function random_recent(){
 				var recent = $('#recent img');
-				var random = [1,2,3].sample();
-				recent.attr('src','images/v2/recent-apps-'+random+'.png');
+				var random = [1,2].sample();
+				recent.attr('src','images/v3/frequently-apps'+random+'.png');
 
 			}
 
@@ -108,14 +109,12 @@
 			    	$('.vertic').addClass('open');
 			    });
 
-			    
-
-			    $('.clear').click(function(){
+			    /*$('.clear').click(function(){
 			    	var img = $(this).next('img');
 			    	recentapps = $(this).next('img').attr('src');
 			    	img.attr('src','images/v2/recent-apps-noapp.png');
 
-			    });
+			    });*/
 
 			      
 		  	});
